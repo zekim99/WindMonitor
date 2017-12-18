@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9506D6451BF441DB00C3EF55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9506D6441BF441DB00C3EF55 /* AppDelegate.swift */; };
+		9506D6471BF441DB00C3EF55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9506D6461BF441DB00C3EF55 /* Assets.xcassets */; };
+		9506D64A1BF441DB00C3EF55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9506D6481BF441DB00C3EF55 /* MainMenu.xib */; };
+		9506D6521BF46C2600C3EF55 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9506D6511BF46C2600C3EF55 /* StatusMenuController.swift */; };
+		9506D6561BF4709900C3EF55 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9506D6551BF4709900C3EF55 /* WeatherAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9506D6411BF441DA00C3EF55 /* WindMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9506D6441BF441DB00C3EF55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9506D6461BF441DB00C3EF55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9506D6491BF441DB00C3EF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9506D64B1BF441DB00C3EF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9506D6511BF46C2600C3EF55 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		9506D6551BF4709900C3EF55 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherAPI.swift; path = ../WeatherAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9506D63E1BF441DA00C3EF55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9506D6381BF441DA00C3EF55 = {
+			isa = PBXGroup;
+			children = (
+				9506D6431BF441DA00C3EF55 /* WindMonitor */,
+				9506D6421BF441DA00C3EF55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9506D6421BF441DA00C3EF55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9506D6411BF441DA00C3EF55 /* WindMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9506D6431BF441DA00C3EF55 /* WindMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				9506D6551BF4709900C3EF55 /* WeatherAPI.swift */,
+				9506D6441BF441DB00C3EF55 /* AppDelegate.swift */,
+				9506D6511BF46C2600C3EF55 /* StatusMenuController.swift */,
+				9506D6461BF441DB00C3EF55 /* Assets.xcassets */,
+				9506D6481BF441DB00C3EF55 /* MainMenu.xib */,
+				9506D64B1BF441DB00C3EF55 /* Info.plist */,
+			);
+			path = WindMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9506D6401BF441DA00C3EF55 /* WindMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9506D64E1BF441DB00C3EF55 /* Build configuration list for PBXNativeTarget "WindMonitor" */;
+			buildPhases = (
+				9506D63D1BF441DA00C3EF55 /* Sources */,
+				9506D63E1BF441DA00C3EF55 /* Frameworks */,
+				9506D63F1BF441DA00C3EF55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WindMonitor;
+			productName = WindMonitor;
+			productReference = 9506D6411BF441DA00C3EF55 /* WindMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9506D6391BF441DA00C3EF55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Zed;
+				TargetAttributes = {
+					9506D6401BF441DA00C3EF55 = {
+						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 9506D63C1BF441DA00C3EF55 /* Build configuration list for PBXProject "WindMonitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9506D6381BF441DA00C3EF55;
+			productRefGroup = 9506D6421BF441DA00C3EF55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9506D6401BF441DA00C3EF55 /* WindMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9506D63F1BF441DA00C3EF55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9506D6471BF441DB00C3EF55 /* Assets.xcassets in Resources */,
+				9506D64A1BF441DB00C3EF55 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9506D63D1BF441DA00C3EF55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9506D6561BF4709900C3EF55 /* WeatherAPI.swift in Sources */,
+				9506D6521BF46C2600C3EF55 /* StatusMenuController.swift in Sources */,
+				9506D6451BF441DB00C3EF55 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9506D6481BF441DB00C3EF55 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9506D6491BF441DB00C3EF55 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9506D64C1BF441DB00C3EF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9506D64D1BF441DB00C3EF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9506D64F1BF441DB00C3EF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WindMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fishwheel.WindMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9506D6501BF441DB00C3EF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WindMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fishwheel.WindMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9506D63C1BF441DA00C3EF55 /* Build configuration list for PBXProject "WindMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9506D64C1BF441DB00C3EF55 /* Debug */,
+				9506D64D1BF441DB00C3EF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9506D64E1BF441DB00C3EF55 /* Build configuration list for PBXNativeTarget "WindMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9506D64F1BF441DB00C3EF55 /* Debug */,
+				9506D6501BF441DB00C3EF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9506D6391BF441DA00C3EF55 /* Project object */;
+}

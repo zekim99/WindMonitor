@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="WindMonitor" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="5Bm-EU-m97">
+            <items>
+                <menuItem title="Wind Speed:" enabled="NO" id="YEu-kG-aNC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Wind Direction:" enabled="NO" id="aZA-z1-sxv">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Top Wind Gust Today:" enabled="NO" id="Aua-fa-A6h">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="drn-DF-e0i"/>
+                <menuItem title="Update" id="NeJ-CO-dK8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="updateClicked:" target="P9T-X3-lXy" id="wJA-tx-gV7"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="qdL-R3-bJp"/>
+                <menuItem title="Reset Top Gust" id="CIA-WS-rn2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="DTF-LB-W70"/>
+                <menuItem title="Quit" id="dFh-h7-kMd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="P9T-X3-lXy" id="NPz-cA-FWM"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="21" y="209"/>
+        </menu>
+        <customObject id="P9T-X3-lXy" customClass="StatusMenuController" customModule="WindMonitor" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="5Bm-EU-m97" id="s6Z-KE-FAd"/>
+                <outlet property="windDirectionMenu" destination="aZA-z1-sxv" id="J70-dH-jI8"/>
+                <outlet property="windGustMenu" destination="Aua-fa-A6h" id="MtP-tO-GVO"/>
+                <outlet property="windSpeedMenu" destination="YEu-kG-aNC" id="0dO-k7-1N6"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
