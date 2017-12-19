@@ -23,7 +23,7 @@ protocol WeatherAPIDelegate {
 
 class WeatherAPI {
     
-    let BASE_URL: String = "http://fishwheel.com:8080/wx"
+    let BASE_URL: String = "ADD_URL" // see https://github.com/zekim99/weewx_wxService for data specification
     var delegate: WeatherAPIDelegate?
     var _topWindGustMph: Float = 0.0
     var _topWindGustTime: Date = Date()
@@ -41,7 +41,7 @@ class WeatherAPI {
         
         
         do {
-            let task = try session.dataTask(with: url!, completionHandler: { data, response, err in
+            let task =  session.dataTask(with: url!, completionHandler: { data, response, err in
                 if let error = err {
                     NSLog("Unable to fetch weather data: \(error)")
                 }
@@ -60,9 +60,7 @@ class WeatherAPI {
             
             task.resume()
             
-        } catch {
-            NSLog("Error fetching weather data")
-        }
+        } 
         
     }
     
