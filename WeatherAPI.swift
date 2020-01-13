@@ -15,6 +15,7 @@ struct Weather {
     var topWindGustMph: Float = 0.0
     var topWindGustTime: Date = Date()
     var isTopGust: Bool = false
+    var tempOut: Float
 }
 
 protocol WeatherAPIDelegate {
@@ -75,12 +76,15 @@ class WeatherAPI {
         do {
             let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : Any]
             
-            let jsonLive = json["live"] as! [String : Any]
+            //let jsonLive = json["live"] as! [String : Any]
             
-            let windDir = (jsonLive["windDir"] as? Int) ?? -1
-            let windSpeedMph = (jsonLive["windSpeed"] as! Float)
-            let windGustMph = (jsonLive["windSpeed"] as! Float)
-            let windGustTime = (jsonLive["dateTime"] as! String) + " GMT"
+            let windDir = (json["windDir"] as? Int) ?? -1
+            let windSpeedMph = (json["windSpeed"] as! Float)
+            let windGustMph = (json["windSpeed"] as! Float)
+            let windGustTime = (json["dateTime"] as! String) + " GMT"
+            
+            // also grab some other data for fun
+            let tempOut = (json["outTemp"] as? NSNumber)?.floatValue ?? 0
             
             debugPrint(windGustMph)
             debugPrint(_topWindGustMph)
@@ -99,7 +103,8 @@ class WeatherAPI {
                 windGustMph: windGustMph,
                 topWindGustMph: _topWindGustMph,
                 topWindGustTime: _topWindGustTime,
-                isTopGust: _isTopGust)
+                isTopGust: _isTopGust,
+                tempOut: tempOut)
             
             
             debugPrint(weather)

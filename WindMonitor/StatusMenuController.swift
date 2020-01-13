@@ -32,6 +32,8 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
     
     @IBOutlet weak var windGustMenu: NSMenuItem!
     
+    @IBOutlet weak var tempOutMenu: NSMenuItem!
+    
     override func awakeFromNib() {
         
         statusItem.menu = statusMenu
@@ -70,17 +72,20 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
         let topWindGustTime = dateFormatter.string(from: weather.topWindGustTime as Date)
         
         if let statusButton = self.statusItem.button {
-            statusButton.highlight(false)
-            statusButton.title = NSString(format: "%.1f", weather.windSpeedMph) as String
-            statusButton.image = directionInfo.image
-            statusButton.image?.isTemplate = true
-            statusButton.highlight(weather.isTopGust)
+            DispatchQueue.main.async {
+                statusButton.highlight(false)
+                statusButton.title = NSString(format: "%.1f", weather.windSpeedMph) as String
+                statusButton.image = directionInfo.image
+                statusButton.image?.isTemplate = true
+                statusButton.highlight(weather.isTopGust)
+            }
         }
         
         
         windSpeedMenu.title = NSString(format: "Wind Speed: %.1f mph", weather.windSpeedMph) as String
         windDirectionMenu.title = NSString(format: "Wind Direction: \(directionInfo.dirString)" as NSString) as String
         windGustMenu.title = NSString(format: "Top Wind Gust: %.1f mph at %@", weather.topWindGustMph, topWindGustTime) as String
+        tempOutMenu.title = NSString(format: "Temperature: %.1f°", weather.tempOut) as String
     }
     
     func calculateDirection(_ degrees: Int) -> (dirString:NSString, image:NSImage) {
