@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -25,6 +25,9 @@
                 <menuItem title="Top Wind Gust Today:" enabled="NO" id="Aua-fa-A6h">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem title="Temperature: " enabled="NO" id="PgN-Jf-WAN">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="drn-DF-e0i"/>
                 <menuItem title="Update" id="NeJ-CO-dK8">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -44,11 +47,12 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="21" y="209"/>
+            <point key="canvasLocation" x="20.5" y="219"/>
         </menu>
         <customObject id="P9T-X3-lXy" customClass="StatusMenuController" customModule="WindMonitor" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="5Bm-EU-m97" id="s6Z-KE-FAd"/>
+                <outlet property="tempOutMenu" destination="PgN-Jf-WAN" id="1Tm-qT-cUk"/>
                 <outlet property="windDirectionMenu" destination="aZA-z1-sxv" id="J70-dH-jI8"/>
                 <outlet property="windGustMenu" destination="Aua-fa-A6h" id="MtP-tO-GVO"/>
                 <outlet property="windSpeedMenu" destination="YEu-kG-aNC" id="0dO-k7-1N6"/>
