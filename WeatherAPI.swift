@@ -23,7 +23,7 @@ protocol WeatherAPIDelegate {
 
 class WeatherAPI {
     
-    let BASE_URL: String = "ADD_URL" // see https://github.com/zekim99/weewx_wxService for data specification
+    let BASE_URL: String = "https://sahaleeweather.com:8080/wx" // see https://github.com/zekim99/weewx_wxService for data specification
     var delegate: WeatherAPIDelegate?
     var _topWindGustMph: Float = 0.0
     var _topWindGustTime: Date = Date()
@@ -64,6 +64,7 @@ class WeatherAPI {
         
     }
     
+    
     func weatherFromJSONData(_ data: Data) -> Weather? {
         
         //let x = NSCalendar.isDateInToday((NSCalendar)_topWindGustTime)
@@ -74,10 +75,12 @@ class WeatherAPI {
         do {
             let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : Any]
             
-            let windDir = (json["windDir"] as? Int) ?? -1
-            let windSpeedMph = (json["windSpeed"] as! Float)
-            let windGustMph = (json["windSpeed"] as! Float)
-            let windGustTime = (json["dateTime"] as! String) + " GMT"
+            let jsonLive = json["live"] as! [String : Any]
+            
+            let windDir = (jsonLive["windDir"] as? Int) ?? -1
+            let windSpeedMph = (jsonLive["windSpeed"] as! Float)
+            let windGustMph = (jsonLive["windSpeed"] as! Float)
+            let windGustTime = (jsonLive["dateTime"] as! String) + " GMT"
             
             debugPrint(windGustMph)
             debugPrint(_topWindGustMph)

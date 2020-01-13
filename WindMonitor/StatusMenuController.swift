@@ -13,7 +13,7 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
     var weatherAPI: WeatherAPI!
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let interval: Double = 2.0
     
     // Update Menu click handler
@@ -23,7 +23,7 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
 
     // Quit Menu click handler
     @IBAction func quitClicked(_ sender: AnyObject) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
     @IBOutlet weak var windSpeedMenu: NSMenuItem!
@@ -41,7 +41,7 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
         
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarImageEmpty")
-            button.imagePosition = NSCellImagePosition.imageLeft
+            button.imagePosition = NSControl.ImagePosition.imageLeft
             button.title = "- -"
         }
         
@@ -52,7 +52,7 @@ class StatusMenuController: NSObject, WeatherAPIDelegate {
         
     }
     
-    func updateWeather() {
+    @objc func updateWeather() {
         weatherAPI.fetchWeather()
     }
     
